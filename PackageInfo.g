@@ -1,102 +1,126 @@
-#############################################################################
-##  
-##  Demo PackageInfo.g for the GitHubPagesForGAP
-##
-
+#
+# SubcategoriesForCAP: Subcategory and other related constructors for CAP categories
+#
+# This file contains package meta data. For additional information on
+# the meaning and correct usage of these fields, please consult the
+# manual of the "Example" package as well as the comments in its
+# PackageInfo.g file.
+#
 SetPackageInfo( rec(
 
-PackageName := "GitHubPagesForGAP",
+PackageName := "SubcategoriesForCAP",
+Subtitle := "Subcategory and other related constructors for CAP categories",
+Version := Maximum( [
+                   "2020.06.01", ## Mohamed's version
+                   ## this line prevents merge conflicts
+                   "2020.03.02", ## Kamal's version
+                   ## this line prevents merge conflicts
+                   "2019.05.01", ## Tom's version
+                   ] ),
 
-Subtitle := "A GitHub Pages generator for GAP packages",
-Version := "0.3",
-Date := "10/11/2019", # dd/mm/yyyy format
-License := "0BSD",
+Date := ~.Version{[ 1 .. 10 ]},
+Date := Concatenation( ~.Version{[ 9, 10 ]}, "/", ~.Version{[ 6, 7 ]}, "/", ~.Version{[ 1 .. 4 ]} ),
+License := "GPL-2.0-or-later",
 
 Persons := [
   rec(
-    LastName      := "Horn",
-    FirstNames    := "Max",
-    IsAuthor      := true,
-    IsMaintainer  := true,
-    Email         := "max.horn@uni-siegen.de",
-    WWWHome       := "https://www.quendi.de/math",
+    IsAuthor := true,
+    IsMaintainer := true,
+    FirstNames := "Mohamed",
+    LastName := "Barakat",
+    WWWHome := "https://algebra.mathematik.uni-siegen.de/barakat/",
+    Email := "mohamed.barakat@uni-siegen.de",
     PostalAddress := Concatenation(
-                       "Department Mathematik\n",
-                       "Universität Siegen\n",
-                       "Walter-Flex-Straße 3\n",
-                       "57072 Siegen\n",
-                       "Germany" ),
-    Place         := "Siegen",
-    Institution   := "Universität Siegen"
+               "Walter-Flex-Str. 3\n",
+               "57072 Siegen\n",
+               "Germany" ),
+    Place := "Siegen",
+    Institution := "University of Siegen",
   ),
-
   rec(
-    LastName      := "Thor",
-    FirstNames    := "A. U.",
-    IsAuthor      := true,
-    IsMaintainer  := false,
-    #Email         := "author@example.com",
+    IsAuthor := true,
+    IsMaintainer := true,
+    FirstNames := "Tom",
+    LastName := "Kuhmichel",
+    WWWHome := "https://github.com/TKuh",
+    Email := "tom.kuhmichel@student.uni-siegen.de",
+    PostalAddress := Concatenation(
+               "Walter-Flex-Str. 3\n",
+               "57068 Siegen\n",
+               "Germany" ),
+    Place := "Siegen",
+    Institution := "University of Siegen",
   ),
-
   rec(
-    LastName      := "Itor",
-    FirstNames    := "Jan",
-    IsAuthor      := false,
-    IsMaintainer  := true,
-    #Email         := "janitor@example.com",
+    IsAuthor := true,
+    IsMaintainer := true,
+    FirstNames := "Kamal",
+    LastName := "Saleh",
+    WWWHome := "https://github.com/kamalsaleh/",
+    Email := "kamal.saleh@uni-siegen.de",
+    PostalAddress := Concatenation(
+               "Walter-Flex-Str. 3\n",
+               "57072 Siegen\n",
+               "Germany" ),
+    Place := "Siegen",
+    Institution := "University of Siegen",
   ),
 ],
 
-Status := "other",
+# BEGIN URLS
+SourceRepository := rec(
+    Type := "git",
+    URL := "https://github.com/homalg-project/SubcategoriesForCAP",
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+PackageWWWHome  := "https://homalg-project.github.io/SubcategoriesForCAP",
+PackageInfoURL  := "https://homalg-project.github.io/SubcategoriesForCAP/PackageInfo.g",
+README_URL      := "https://homalg-project.github.io/SubcategoriesForCAP/README.md",
+ArchiveURL      := Concatenation( "https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v", ~.Version, "/SubcategoriesForCAP-", ~.Version ),
+# END URLS
 
-# The following are not strictly necessary in your own PackageInfo.g
-# (in the sense that update.g only looks at the usual fields
-# like PackageWWWHome, ArchiveURL etc.). But they are convenient
-# if you use exactly the scheme for your package website that we propose.
-GithubUser := "gap-system",
-GithubRepository := ~.PackageName,
-GithubWWW := Concatenation("https://github.com/", ~.GithubUser, "/", ~.GithubRepository),
+ArchiveFormats := ".tar.gz",
 
-PackageWWWHome := Concatenation("https://", ~.GithubUser, ".github.io/", ~.GithubRepository, "/"),
-README_URL     := Concatenation( ~.PackageWWWHome, "README.md" ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-# The following assumes you are using the Github releases system. If not, adjust
-# it accordingly.
-ArchiveURL     := Concatenation(~.GithubWWW,
-                    "/releases/download/v", ~.Version, "/",
-                    ~.GithubRepository, "-", ~.Version),
+##  Status information. Currently the following cases are recognized:
+##    "accepted"      for successfully refereed packages
+##    "submitted"     for packages submitted for the refereeing
+##    "deposited"     for packages for which the GAP developers agreed
+##                    to distribute them with the core GAP system
+##    "dev"           for development versions of packages
+##    "other"         for all other packages
+##
+Status := "dev",
 
-ArchiveFormats := ".tar.gz .tar.bz2",
-
-AbstractHTML := 
-  "This is a pseudo package that contains no actual\
-  <span class=\"pkgname\">GAP</span> code. Instead, it is a template for other\
-  GAP packages that allows to quickly setup GitHub Pages.",
+AbstractHTML   :=  "",
 
 PackageDoc := rec(
-  BookName  := "GitHubPagesForGAP",
+  BookName  := "SubcategoriesForCAP",
   ArchiveURLSubset := ["doc"],
   HTMLStart := "doc/chap0.html",
   PDFFile   := "doc/manual.pdf",
   SixFile   := "doc/manual.six",
-  LongTitle := "A GitHub Pages generator for GAP packages",
+  LongTitle := "Subcategory and other related constructors for CAP categories",
 ),
 
-# The following dependencies are fake and for testing / demo purposes
 Dependencies := rec(
-  GAP := ">=4.8.1",
+  GAP := ">= 4.9.1",
   NeededOtherPackages := [
-    ["GAPDoc", ">= 1.2"],
-    ["IO", ">= 4.1"],
-  ],
-  SuggestedOtherPackages := [["orb", ">= 4.2"]],
-  ExternalConditions := []
+                   [ "GAPDoc", ">= 1.5" ],
+                   [ "CAP", ">= 2020.02.16" ],
+                   [ "MonoidalCategories", ">= 2020.03.01" ],
+                   [ "CategoryConstructor", ">= 2020.04.05" ]
+                  ],
+  SuggestedOtherPackages := [
+                   [ "Toposes", ">= 2020.02.19" ],
+                   [ "FreydCategoriesForCAP", ">= 2019.11.02" ],
+                  ],
+  ExternalConditions := [ ],
 ),
 
-AvailabilityTest := ReturnTrue,
+AvailabilityTest := function()
+        return true;
+    end,
 
-Keywords := ["GitHub Pages", "GAP"]
+TestFile := "tst/testall.g",
 
 ));
-
-
