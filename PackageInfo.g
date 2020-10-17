@@ -1,4 +1,4 @@
-#
+# SPDX-License-Identifier: GPL-2.0-or-later
 # SubcategoriesForCAP: Subcategory and other related constructors for CAP categories
 #
 # This file contains package meta data. For additional information on
@@ -11,15 +11,15 @@ SetPackageInfo( rec(
 PackageName := "SubcategoriesForCAP",
 Subtitle := "Subcategory and other related constructors for CAP categories",
 Version := Maximum( [
-                   "2020.09.10", ## Mohamed's version
+                   "2020.10-01", ## Mohamed's version
                    ## this line prevents merge conflicts
                    "2020.03.02", ## Kamal's version
                    ## this line prevents merge conflicts
                    "2019.05.01", ## Tom's version
                    ] ),
 
-Date := ~.Version{[ 1 .. 10 ]},
-Date := Concatenation( ~.Version{[ 9, 10 ]}, "/", ~.Version{[ 6, 7 ]}, "/", ~.Version{[ 1 .. 4 ]} ),
+Date := "17/10/2020",
+Date := "17/10/2020",
 License := "GPL-2.0-or-later",
 
 Persons := [
@@ -28,11 +28,11 @@ Persons := [
     IsMaintainer := true,
     FirstNames := "Mohamed",
     LastName := "Barakat",
-    WWWHome := "https://algebra.mathematik.uni-siegen.de/barakat/",
+    WWWHome := "https://mohamed-barakat.github.io/",
     Email := "mohamed.barakat@uni-siegen.de",
     PostalAddress := Concatenation(
                "Walter-Flex-Str. 3\n",
-               "57072 Siegen\n",
+               "57068 Siegen\n",
                "Germany" ),
     Place := "Siegen",
     Institution := "University of Siegen",
@@ -79,7 +79,7 @@ README_URL      := "https://homalg-project.github.io/SubcategoriesForCAP/README.
 ArchiveURL      := Concatenation( "https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v", ~.Version, "/SubcategoriesForCAP-", ~.Version ),
 # END URLS
 
-ArchiveFormats := ".tar.gz",
+ArchiveFormats := ".tar.gz .zip",
 
 ##  Status information. Currently the following cases are recognized:
 ##    "accepted"      for successfully refereed packages
