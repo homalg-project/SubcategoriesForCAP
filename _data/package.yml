@@ -1,7 +1,7 @@
 name: SubcategoriesForCAP
-version: "2020.10-01"
+version: "2020.10-02"
 license: "GPL-2.0-or-later"
-date: 2020-10-17
+date: 2020-10-18
 description: |
     Subcategory and other related constructors for CAP categories
 
@@ -34,7 +34,7 @@ needed-pkgs:
       version: ">= 2020.03.01"
       url: "https://homalg-project.github.io/CAP_project/MonoidalCategories"
     - name: "CategoryConstructor"
-      version: ">= 2020.09.10"
+      version: ">= 2020.10-02"
       url: "https://homalg-project.github.io/CategoryConstructor"
 
 suggested-pkgs:
@@ -51,11 +51,11 @@ packageinfo: https://homalg-project.github.io/SubcategoriesForCAP/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v2020.10-01/SubcategoriesForCAP-2020.10-01.tar.gz
+      url: https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v2020.10-02/SubcategoriesForCAP-2020.10-02.tar.gz
     - name: .zip
-      url: https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v2020.10-01/SubcategoriesForCAP-2020.10-01.zip
+      url: https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v2020.10-02/SubcategoriesForCAP-2020.10-02.zip
 
-pdf: https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v2020.10-01/SubcategoriesForCAP-2020.10-01.pdf
+pdf: https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v2020.10-02/SubcategoriesForCAP-2020.10-02.pdf
 
 abstract: |
 
@@ -66,7 +66,7 @@ citeas: |
     <p class='BibEntry'>
     [<span class='BibKey'>BKS20</span>]   <b class='BibAuthor'>Barakat, M., Kuhmichel, T. and Saleh, K.</b>,
      <i class='BibTitle'>SubcategoriesForCAP, Subcategory and other related constructors for CAP categories,
-             Version 2020.10-01</i>
+             Version 2020.10-02</i>
      (<span class='BibYear'>2020</span>)<br />
     (<span class='BibNote'>GAP package</span>),
     <span class='BibHowpublished'><a href="https://homalg-project.github.io/SubcategoriesForCAP">https://homalg-project.github.io/SubcategoriesForCAP</a></span>.
@@ -74,10 +74,10 @@ citeas: |
     
 
 bibtex: |
-    @misc{ SubcategoriesForCAP2020.10-01,
+    @misc{ SubcategoriesForCAP2020.10-02,
       author =           {Barakat, M. and Kuhmichel, T. and Saleh, K.},
       title =            {{SubcategoriesForCAP},  Subcategory  and other related
-                          constructors for CAP categories, {V}ersion 2020.10-01},
+                          constructors for CAP categories, {V}ersion 2020.10-02},
       month =            {Oct},
       year =             {2020},
       note =             {GAP package},
