@@ -11,15 +11,15 @@ SetPackageInfo( rec(
 PackageName := "SubcategoriesForCAP",
 Subtitle := "Subcategory and other related constructors for CAP categories",
 Version := Maximum( [
-                   "2020.11-01", ## Mohamed's version
+                   "2020.12-01", ## Mohamed's version
                    ## this line prevents merge conflicts
                    "2020.03.02", ## Kamal's version
                    ## this line prevents merge conflicts
                    "2019.05.01", ## Tom's version
                    ] ),
 
-Date := "04/11/2020",
-Date := "04/11/2020",
+Date := "04/12/2020",
+Date := "04/12/2020",
 License := "GPL-2.0-or-later",
 
 Persons := [
@@ -73,7 +73,7 @@ SourceRepository := rec(
     URL := "https://github.com/homalg-project/SubcategoriesForCAP",
 ),
 IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
-PackageWWWHome  := "https://homalg-project.github.io/SubcategoriesForCAP",
+PackageWWWHome  := "https://homalg-project.github.io/pkg/SubcategoriesForCAP",
 PackageInfoURL  := "https://homalg-project.github.io/SubcategoriesForCAP/PackageInfo.g",
 README_URL      := "https://homalg-project.github.io/SubcategoriesForCAP/README.md",
 ArchiveURL      := Concatenation( "https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v", ~.Version, "/SubcategoriesForCAP-", ~.Version ),
