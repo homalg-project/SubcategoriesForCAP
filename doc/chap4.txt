@@ -255,3 +255,34 @@
     [4X[28Xtrue[128X[104X
   [4X[32X[104X
   
+  
+  [1X4.3-3 [33X[0;0YPrecompilation[133X[101X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "SubcategoriesForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FreydCategoriesForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XQQ := HomalgFieldOfRationals( );;[127X[104X
+    [4X[25Xgap>[125X [27X# we do not use SliceCategoryOverTensorUnit because that installs more operations[127X[104X
+    [4X[25X>[125X [27X# which we are not interested in for this simple test[127X[104X
+    [4X[25X>[125X [27Xcategory_constructor := field ->[127X[104X
+    [4X[25X>[125X [27X    SliceCategory([127X[104X
+    [4X[25X>[125X [27X        TensorUnit([127X[104X
+    [4X[25X>[125X [27X            CategoryOfRows( field : FinalizeCategory := true )[127X[104X
+    [4X[25X>[125X [27X        )[127X[104X
+    [4X[25X>[125X [27X    );;[127X[104X
+    [4X[25Xgap>[125X [27Xgiven_arguments := [ QQ ];;[127X[104X
+    [4X[25Xgap>[125X [27Xcompiled_category_name := "SliceCategoryOfCategoryOfRowsOfFieldOverTensorUnitPrecompiled";;[127X[104X
+    [4X[25Xgap>[125X [27Xpackage_name := "SubcategoriesForCAP";;[127X[104X
+    [4X[25Xgap>[125X [27XAdd( CAP_JIT_NON_RESOLVABLE_GLOBAL_VARIABLE_NAMES, "HomalgIdentityMatrix" );;[127X[104X
+    [4X[25Xgap>[125X [27XAdd( CAP_JIT_NON_RESOLVABLE_GLOBAL_VARIABLE_NAMES, "HomalgZeroMatrix" );;[127X[104X
+    [4X[25Xgap>[125X [27XCapJitPrecompileCategoryAndCompareResult([127X[104X
+    [4X[25X>[125X [27X    category_constructor,[127X[104X
+    [4X[25X>[125X [27X    given_arguments,[127X[104X
+    [4X[25X>[125X [27X    package_name,[127X[104X
+    [4X[25X>[125X [27X    compiled_category_name[127X[104X
+    [4X[25X>[125X [27X    : operations := "primitive"[127X[104X
+    [4X[25X>[125X [27X);[127X[104X
+  [4X[32X[104X
+  

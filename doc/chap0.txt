@@ -6,10 +6,10 @@
         [1X Subcategory and other related constructors for CAP categories [101X
   
   
-                                   2021.06-01
+                                   2021.10-01
   
   
-                                  15 June 2021
+                                12 October 2021
   
   
                                 Mohamed Barakat
@@ -124,6 +124,7 @@
     4.3 [33X[0;0YExamples[133X
       4.3-1 [33X[0;0YSliceCategory[133X
       4.3-2 [33X[0;0YIteratedInternalHom[133X
+      4.3-3 [33X[0;0YPrecompilation[133X
   5 [33X[0;0YSlice categories (lazy data structure)[133X
     5.1 [33X[0;0YGAP categories[133X
       5.1-1 IsCapLazySliceCategory

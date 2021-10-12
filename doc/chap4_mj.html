@@ -51,6 +51,8 @@
 </span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X782B6A7C868D3F7D">4.3-2 <span class="Heading">IteratedInternalHom</span></a>
 </span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7D7026828261C26B">4.3-3 <span class="Heading">Precompilation</span></a>
+</span>
 </div></div>
 </div>
 
@@ -331,6 +333,39 @@ A morphism in Rows( Q[x,y] )
 An object in the slice category given by the above data
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Source( iota ) = Range( iota );</span>
 true
+</pre></div>
+
+<p><a id="X7D7026828261C26B" name="X7D7026828261C26B"></a></p>
+
+<h5>4.3-3 <span class="Heading">Precompilation</span></h5>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LoadPackage( "SubcategoriesForCAP" );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LoadPackage( "FreydCategoriesForCAP" );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">QQ := HomalgFieldOfRationals( );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># we do not use SliceCategoryOverTensorUnit because that installs more operations</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput"># which we are not interested in for this simple test</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">category_constructor := field -&gt;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    SliceCategory(</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">        TensorUnit(</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">            CategoryOfRows( field : FinalizeCategory := true )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">        )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">given_arguments := [ QQ ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">compiled_category_name := "SliceCategoryOfCategoryOfRowsOfFieldOverTensorUnitPrecompiled";;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">package_name := "SubcategoriesForCAP";;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Add( CAP_JIT_NON_RESOLVABLE_GLOBAL_VARIABLE_NAMES, "HomalgIdentityMatrix" );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Add( CAP_JIT_NON_RESOLVABLE_GLOBAL_VARIABLE_NAMES, "HomalgZeroMatrix" );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CapJitPrecompileCategoryAndCompareResult(</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    category_constructor,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    given_arguments,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    package_name,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    compiled_category_name</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    : operations := "primitive"</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">);</span>
 </pre></div>
 
 
