@@ -73,7 +73,23 @@
   
   [1X1.4 [33X[0;0YConstructors[133X[101X
   
-  [1X1.4-1 SubcategoryGeneratedByListOfMorphisms[101X
+  [1X1.4-1 Subcategory[101X
+  
+  [33X[1;0Y[29X[2XSubcategory[102X( [3XC[103X, [3Xname[103X ) [32X operation[133X
+  
+  [1X1.4-2 AsSubcategoryCell[101X
+  
+  [33X[1;0Y[29X[2XAsSubcategoryCell[102X( [3XD[103X, [3Xc[103X ) [32X operation[133X
+  
+  [1X1.4-3 AsSubcategoryCell[101X
+  
+  [33X[1;0Y[29X[2XAsSubcategoryCell[102X( [3Xsource[103X, [3Xmor[103X, [3Xrange[103X ) [32X operation[133X
+  
+  [1X1.4-4 \/[101X
+  
+  [33X[1;0Y[29X[2X\/[102X( [3Xc[103X, [3XD[103X ) [32X operation[133X
+  
+  [1X1.4-5 SubcategoryGeneratedByListOfMorphisms[101X
   
   [33X[1;0Y[29X[2XSubcategoryGeneratedByListOfMorphisms[102X( [3XC[103X, [3XL[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YCapSubcategory[133X
