@@ -70,40 +70,40 @@
   
   [1X3.3 [33X[0;0YAttributes[133X[101X
   
-  [1X3.3-1 BaseObject[101X
+  [1X3.3-1 AmbientCategory[101X
+  
+  [33X[1;0Y[29X[2XAmbientCategory[102X( [3XS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya list[133X
+  
+  [33X[0;0YThe ambient category of the slice category [3XS[103X.[133X
+  
+  [1X3.3-2 BaseObject[101X
   
   [33X[1;0Y[29X[2XBaseObject[102X( [3XS[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya [5XCAP[105X object[133X
   
   [33X[0;0YThe base object of the slice category [3XS[103X.[133X
   
-  [1X3.3-2 BaseObject[101X
+  [1X3.3-3 BaseObject[101X
   
   [33X[1;0Y[29X[2XBaseObject[102X( [3Xcell[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya [5XCAP[105X object[133X
   
   [33X[0;0YThe base object underlying [3Xcell[103X.[133X
   
-  [1X3.3-3 UnderlyingMorphism[101X
+  [1X3.3-4 UnderlyingMorphism[101X
   
   [33X[1;0Y[29X[2XUnderlyingMorphism[102X( [3Xobject[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya [5XCAP[105X morphism[133X
   
   [33X[0;0YThe morphism in the ambient category underlying [3Xobject[103X.[133X
   
-  [1X3.3-4 UnderlyingCell[101X
+  [1X3.3-5 UnderlyingCell[101X
   
   [33X[1;0Y[29X[2XUnderlyingCell[102X( [3Xcell[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya [5XCAP[105X cell[133X
   
   [33X[0;0YThe cell in the ambient category underlying [3Xcell[103X.[133X
-  
-  [1X3.3-5 AmbientCategory[101X
-  
-  [33X[1;0Y[29X[2XAmbientCategory[102X( [3XS[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10Ya list[133X
-  
-  [33X[0;0YThe ambient category of the slice category [3XS[103X.[133X
   
   [1X3.3-6 InclusionFunctor[101X
   
