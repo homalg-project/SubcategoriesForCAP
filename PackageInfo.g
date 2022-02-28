@@ -10,8 +10,8 @@ SetPackageInfo( rec(
 
 PackageName := "SubcategoriesForCAP",
 Subtitle := "Subcategory and other related constructors for CAP categories",
-Version := "2022.01-04",
-Date := "01/02/2022",
+Version := "2022.02-01",
+Date := "28/02/2022",
 License := "GPL-2.0-or-later",
 
 Persons := [
