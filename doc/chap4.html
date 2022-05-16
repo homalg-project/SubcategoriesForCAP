@@ -160,15 +160,15 @@
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LoadPackage( "FinSetsForCAP" );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LoadPackage( "FinSetsForCAP", "&gt;= 2022.05-01" );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B := FinSet( 2 );</span>
 &lt;An object in SkeletalFinSets&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o0 := AsSliceCategoryCell( MapOfFinSets( B, [ 2, 2 ], B ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o0 := AsSliceCategoryCell( MapOfFinSets( B, [ 1, 1 ], B ) );</span>
 An object in the slice category given by: &lt;A morphism in SkeletalFinSets&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o1 := AsSliceCategoryCell( MapOfFinSets( FinSet( 3 ), [ 1, 2, 1 ], B ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o1 := AsSliceCategoryCell( MapOfFinSets( FinSet( 3 ), [ 0, 1, 0 ], B ) );</span>
 An object in the slice category given by: &lt;A morphism in SkeletalFinSets&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o2 := AsSliceCategoryCell( MapOfFinSets( FinSet( 4 ), [ 2, 1, 2, 1 ], B ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o2 := AsSliceCategoryCell( MapOfFinSets( FinSet( 4 ), [ 1, 0, 1, 0 ], B ) );</span>
 An object in the slice category given by: &lt;A morphism in SkeletalFinSets&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( o0 );</span>
 true
@@ -195,12 +195,12 @@ true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tau := UniversalMorphismIntoTerminalObject( o2 );</span>
 A morphism in the slice category given by: &lt;A morphism in SkeletalFinSets&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( tau );</span>
-[ 4, [ 2, 1, 2, 1 ], 2 ]
+[ 4, [ 1, 0, 1, 0 ], 2 ]
 
 A morphism in the slice category given by the above data
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsTerminal( Range( tau ) );</span>
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">n := MapOfFinSets( FinSet( 3 ), [ 3, 1, 4 ], FinSet( 4 ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">n := MapOfFinSets( FinSet( 3 ), [ 2, 0, 3 ], FinSet( 4 ) );</span>
 &lt;A morphism in SkeletalFinSets&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( n );</span>
 true
@@ -208,7 +208,7 @@ true
 A morphism in the slice category given by: &lt;A morphism in SkeletalFinSets&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( n );</span>
 false
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1 := MapOfFinSets( FinSet( 3 ), [ 2, 1, 4 ], FinSet( 4 ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1 := MapOfFinSets( FinSet( 3 ), [ 1, 0, 3 ], FinSet( 4 ) );</span>
 &lt;A morphism in SkeletalFinSets&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1 := AsSliceCategoryCell( o1, m1, o2 );</span>
 A morphism in the slice category given by: &lt;A morphism in SkeletalFinSets&gt;
@@ -216,7 +216,7 @@ A morphism in the slice category given by: &lt;A morphism in SkeletalFinSets&gt;
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSplitEpimorphism( m1 );</span>
 false
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m2 := MapOfFinSets( FinSet( 4 ), [ 2, 3, 2, 1 ], FinSet( 3 ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m2 := MapOfFinSets( FinSet( 4 ), [ 1, 2, 1, 0 ], FinSet( 3 ) );</span>
 &lt;A morphism in SkeletalFinSets&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m2 := AsSliceCategoryCell( o2, m2, o1 );</span>
 A morphism in the slice category given by: &lt;A morphism in SkeletalFinSets&gt;
