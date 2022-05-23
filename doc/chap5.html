@@ -174,16 +174,16 @@
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LoadPackage( "FinSetsForCAP", "&gt;= 2022.05-01" );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LoadPackage( "FinSetsForCAP", "&gt;= 2022.05-05" );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B := FinSet( 2 );</span>
-&lt;An object in SkeletalFinSets&gt;
+|2|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o0 := AsSliceCategoryCell( [ MapOfFinSets( B, [ 1, 1 ], B  ) ] );</span>
-An object in the lazy slice category given by: &lt;A morphism in SkeletalFinSets&gt;
+An object in the lazy slice category given by: |2| → |2|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o1 := AsSliceCategoryCell( [ MapOfFinSets( FinSet( 3 ), [ 0, 1, 0 ], B ) ] );</span>
-An object in the lazy slice category given by: &lt;A morphism in SkeletalFinSets&gt;
+An object in the lazy slice category given by: |3| → |2|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o2 := AsSliceCategoryCell( [ MapOfFinSets( FinSet( 4 ), [ 1, 0, 1, 0 ], B ) ] );</span>
-An object in the lazy slice category given by: &lt;A morphism in SkeletalFinSets&gt;
+An object in the lazy slice category given by: |4| → |2|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( o0 );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( o1 );</span>
@@ -199,57 +199,57 @@ true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsHomSetInhabited( o2, o1 );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">iota := UniversalMorphismFromInitialObject( o1 );</span>
-A morphism in the lazy slice category given by: &lt;A morphism in SkeletalFinSets&gt;
+A morphism in the lazy slice category given by: |0| → |3|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( iota );</span>
-[ 0, [  ], 3 ]
+∅ ⱶ[  ]→ { 0, 1, 2 }
 
 A morphism in the lazy slice category given by the above data
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsInitial( Source( iota ) );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tau := UniversalMorphismIntoTerminalObject( o2 );</span>
-A morphism in the lazy slice category given by: &lt;A morphism in SkeletalFinSets&gt;
+A morphism in the lazy slice category given by: |4| → |2|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( tau );</span>
-[ 4, [ 1, 0, 1, 0 ], 2 ]
+{ 0,..., 3 } ⱶ[ 1, 0, 1, 0 ]→ { 0, 1 }
 
 A morphism in the lazy slice category given by the above data
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsTerminal( Range( tau ) );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">n := MapOfFinSets( FinSet( 3 ), [ 2, 0, 3 ], FinSet( 4 ) );</span>
-&lt;A morphism in SkeletalFinSets&gt;
+|3| → |4|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( n );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">n := AsSliceCategoryCell( o1, n, o2 );</span>
-A morphism in the lazy slice category given by: &lt;A morphism in SkeletalFinSets&gt;
+A morphism in the lazy slice category given by: |3| → |4|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( n );</span>
 false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1 := MapOfFinSets( FinSet( 3 ), [ 1, 0, 3 ], FinSet( 4 ) );</span>
-&lt;A morphism in SkeletalFinSets&gt;
+|3| → |4|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1 := AsSliceCategoryCell( o1, m1, o2 );</span>
-A morphism in the lazy slice category given by: &lt;A morphism in SkeletalFinSets&gt;
+A morphism in the lazy slice category given by: |3| → |4|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( m1 );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSplitEpimorphism( m1 );</span>
 false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m2 := MapOfFinSets( FinSet( 4 ), [ 1, 2, 1, 0 ], FinSet( 3 ) );</span>
-&lt;A morphism in SkeletalFinSets&gt;
+|4| → |3|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m2 := AsSliceCategoryCell( o2, m2, o1 );</span>
-A morphism in the lazy slice category given by: &lt;A morphism in SkeletalFinSets&gt;
+A morphism in the lazy slice category given by: |4| → |3|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( m2 );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSplitEpimorphism( m2 );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m3 := PreCompose( m1, m2 );</span>
-A morphism in the lazy slice category given by: &lt;A morphism in SkeletalFinSets&gt;
+A morphism in the lazy slice category given by: |3| → |3|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( m3 );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsOne( m3 );</span>
 false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m4 := Inverse( m3 );</span>
-A morphism in the lazy slice category given by: &lt;A morphism in SkeletalFinSets&gt;
+A morphism in the lazy slice category given by: |3| → |3|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( m4 );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m5 := PreCompose( m2, m1 );</span>
-A morphism in the lazy slice category given by: &lt;A morphism in SkeletalFinSets&gt;
+A morphism in the lazy slice category given by: |4| → |4|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( m5 );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsOne( m5 );</span>

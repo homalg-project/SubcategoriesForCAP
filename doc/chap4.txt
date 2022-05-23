@@ -86,13 +86,13 @@
     [4X[25Xgap>[125X [27XLoadPackage( "FinSetsForCAP", ">= 2022.05-01" );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XB := FinSet( 2 );[127X[104X
-    [4X[28X<An object in SkeletalFinSets>[128X[104X
+    [4X[28X|2|[128X[104X
     [4X[25Xgap>[125X [27Xo0 := AsSliceCategoryCell( MapOfFinSets( B, [ 1, 1 ], B ) );[127X[104X
-    [4X[28XAn object in the slice category given by: <A morphism in SkeletalFinSets>[128X[104X
+    [4X[28XAn object in the slice category given by: |2| → |2|[128X[104X
     [4X[25Xgap>[125X [27Xo1 := AsSliceCategoryCell( MapOfFinSets( FinSet( 3 ), [ 0, 1, 0 ], B ) );[127X[104X
-    [4X[28XAn object in the slice category given by: <A morphism in SkeletalFinSets>[128X[104X
+    [4X[28XAn object in the slice category given by: |3| → |2|[128X[104X
     [4X[25Xgap>[125X [27Xo2 := AsSliceCategoryCell( MapOfFinSets( FinSet( 4 ), [ 1, 0, 1, 0 ], B ) );[127X[104X
-    [4X[28XAn object in the slice category given by: <A morphism in SkeletalFinSets>[128X[104X
+    [4X[28XAn object in the slice category given by: |4| → |2|[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( o0 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( o1 );[127X[104X
@@ -108,57 +108,57 @@
     [4X[25Xgap>[125X [27XIsHomSetInhabited( o2, o1 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xiota := UniversalMorphismFromInitialObject( o1 );[127X[104X
-    [4X[28XA morphism in the slice category given by: <A morphism in SkeletalFinSets>[128X[104X
+    [4X[28XA morphism in the slice category given by: |0| → |3|[128X[104X
     [4X[25Xgap>[125X [27XDisplay( iota );[127X[104X
-    [4X[28X[ 0, [  ], 3 ][128X[104X
+    [4X[28X∅ ⱶ[  ]→ { 0, 1, 2 }[128X[104X
     [4X[28X[128X[104X
     [4X[28XA morphism in the slice category given by the above data[128X[104X
     [4X[25Xgap>[125X [27XIsInitial( Source( iota ) );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xtau := UniversalMorphismIntoTerminalObject( o2 );[127X[104X
-    [4X[28XA morphism in the slice category given by: <A morphism in SkeletalFinSets>[128X[104X
+    [4X[28XA morphism in the slice category given by: |4| → |2|[128X[104X
     [4X[25Xgap>[125X [27XDisplay( tau );[127X[104X
-    [4X[28X[ 4, [ 1, 0, 1, 0 ], 2 ][128X[104X
+    [4X[28X{ 0,..., 3 } ⱶ[ 1, 0, 1, 0 ]→ { 0, 1 }[128X[104X
     [4X[28X[128X[104X
     [4X[28XA morphism in the slice category given by the above data[128X[104X
     [4X[25Xgap>[125X [27XIsTerminal( Range( tau ) );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xn := MapOfFinSets( FinSet( 3 ), [ 2, 0, 3 ], FinSet( 4 ) );[127X[104X
-    [4X[28X<A morphism in SkeletalFinSets>[128X[104X
+    [4X[28X|3| → |4|[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( n );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xn := AsSliceCategoryCell( o1, n, o2 );[127X[104X
-    [4X[28XA morphism in the slice category given by: <A morphism in SkeletalFinSets>[128X[104X
+    [4X[28XA morphism in the slice category given by: |3| → |4|[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( n );[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27Xm1 := MapOfFinSets( FinSet( 3 ), [ 1, 0, 3 ], FinSet( 4 ) );[127X[104X
-    [4X[28X<A morphism in SkeletalFinSets>[128X[104X
+    [4X[28X|3| → |4|[128X[104X
     [4X[25Xgap>[125X [27Xm1 := AsSliceCategoryCell( o1, m1, o2 );[127X[104X
-    [4X[28XA morphism in the slice category given by: <A morphism in SkeletalFinSets>[128X[104X
+    [4X[28XA morphism in the slice category given by: |3| → |4|[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( m1 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsSplitEpimorphism( m1 );[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27Xm2 := MapOfFinSets( FinSet( 4 ), [ 1, 2, 1, 0 ], FinSet( 3 ) );[127X[104X
-    [4X[28X<A morphism in SkeletalFinSets>[128X[104X
+    [4X[28X|4| → |3|[128X[104X
     [4X[25Xgap>[125X [27Xm2 := AsSliceCategoryCell( o2, m2, o1 );[127X[104X
-    [4X[28XA morphism in the slice category given by: <A morphism in SkeletalFinSets>[128X[104X
+    [4X[28XA morphism in the slice category given by: |4| → |3|[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( m2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsSplitEpimorphism( m2 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xm3 := PreCompose( m1, m2 );[127X[104X
-    [4X[28XA morphism in the slice category given by: <A morphism in SkeletalFinSets>[128X[104X
+    [4X[28XA morphism in the slice category given by: |3| → |3|[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( m3 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsOne( m3 );[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27Xm4 := Inverse( m3 );[127X[104X
-    [4X[28XA morphism in the slice category given by: <A morphism in SkeletalFinSets>[128X[104X
+    [4X[28XA morphism in the slice category given by: |3| → |3|[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( m4 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xm5 := PreCompose( m2, m1 );[127X[104X
-    [4X[28XA morphism in the slice category given by: <A morphism in SkeletalFinSets>[128X[104X
+    [4X[28XA morphism in the slice category given by: |4| → |4|[128X[104X
     [4X[25Xgap>[125X [27XIsWellDefined( m5 );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsOne( m5 );[127X[104X
