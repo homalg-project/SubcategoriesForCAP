@@ -48,7 +48,9 @@
 </span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X782B6A7C868D3F7D">4.3-2 <span class="Heading">IteratedInternalHom</span></a>
 </span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7D7026828261C26B">4.3-3 <span class="Heading">Precompilation</span></a>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X796AC9C8870C17BB">4.3-3 <span class="Heading">Double pushout rewriting</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7D7026828261C26B">4.3-4 <span class="Heading">Precompilation</span></a>
 </span>
 </div></div>
 </div>
@@ -332,9 +334,72 @@ An object in the slice category given by the above data
 true
 </pre></div>
 
+<p><a id="X796AC9C8870C17BB" name="X796AC9C8870C17BB"></a></p>
+
+<h5>4.3-3 <span class="Heading">Double pushout rewriting</span></h5>
+
+<p>Double pushout in the slice category of <code class="code">SkeletalFinSets</code> over its subobject classifier.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LoadPackage( "SubcategoriesForCAP" );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">omega := SubobjectClassifier( SkeletalFinSets );</span>
+|2|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S := SliceCategory( omega );</span>
+A slice category of SkeletalFinSets
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">k := omega;</span>
+|2|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">K := MapOfFinSets( k, [ 1, 0 ], omega ) / S;</span>
+An object in the slice category given by: |2| → |2|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := FinSet( 6 );</span>
+|6|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L := MapOfFinSets( l, [ 1, 0, 1, 0, 0, 1 ], omega ) / S;</span>
+An object in the slice category given by: |6| → |2|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r := FinSet( 7 );</span>
+|7|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">R := MapOfFinSets( r, [ 1, 0, 0, 1, 1, 0, 0 ], omega ) / S;</span>
+An object in the slice category given by: |7| → |2|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">lambda := AsSliceCategoryCell( K, MapOfFinSets( k, [ 0, 1 ], l ), L );</span>
+A morphism in the slice category given by: |2| → |6|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rho := AsSliceCategoryCell( K, MapOfFinSets( k, [ 0, 1 ], r ), R );</span>
+A morphism in the slice category given by: |2| → |7|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g := FinSet( 8 );</span>
+|8|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := MapOfFinSets( g, [ 1, 0, 1, 0, 0, 1, 1, 1 ], omega ) / S;</span>
+An object in the slice category given by: |8| → |2|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mu := AsSliceCategoryCell( L, MapOfFinSets( l, [ 0, 1, 2, 3, 4, 5 ], g ), G );</span>
+A morphism in the slice category given by: |6| → |8|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">poc := PushoutComplement( lambda, mu );</span>
+A morphism in the slice category given by: |4| → |8|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( poc );</span>
+{ 0,..., 3 } ⱶ[ 0, 1, 6, 7 ]→ { 0,..., 7 }
+
+A morphism in the slice category given by the above data
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( Source( poc ) );</span>
+{ 0,..., 3 } ⱶ[ 1, 0, 1, 1 ]→ { 0, 1 }
+
+An object in the slice category given by the above data
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">dpo := DPO( mu, lambda, rho );</span>
+[ A morphism in the slice category given by: |4| → |9|,
+  A morphism in the slice category given by: |7| → |9| ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( dpo[1] );</span>
+{ 0,..., 3 } ⱶ[ 0, 1, 2, 3 ]→ { 0,..., 8 }
+
+A morphism in the slice category given by the above data
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( dpo[2] );</span>
+{ 0,..., 6 } ⱶ[ 0, 1, 4, 5, 6, 7, 8 ]→ { 0,..., 8 }
+
+A morphism in the slice category given by the above data
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( Range( dpo[1] ) );</span>
+{ 0,..., 8 } ⱶ[ 1, 0, 1, 1, 0, 1, 1, 0, 0 ]→ { 0, 1 }
+
+An object in the slice category given by the above data
+</pre></div>
+
 <p><a id="X7D7026828261C26B" name="X7D7026828261C26B"></a></p>
 
-<h5>4.3-3 <span class="Heading">Precompilation</span></h5>
+<h5>4.3-4 <span class="Heading">Precompilation</span></h5>
 
 
 <div class="example"><pre>
@@ -372,7 +437,7 @@ true
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    number_of_objectified_objects_in_data_structure_of_object := 3,</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    number_of_objectified_morphisms_in_data_structure_of_object := 1,</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    number_of_objectified_objects_in_data_structure_of_morphism := 6,</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    number_of_objectified_morphisms_in_data_structure_of_morphism := 2</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    number_of_objectified_morphisms_in_data_structure_of_morphism := 3</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">);</span>
 </pre></div>
 

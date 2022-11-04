@@ -256,7 +256,69 @@
   [4X[32X[104X
   
   
-  [1X4.3-3 [33X[0;0YPrecompilation[133X[101X
+  [1X4.3-3 [33X[0;0YDouble pushout rewriting[133X[101X
+  
+  [33X[0;0YDouble  pushout  in the slice category of [10XSkeletalFinSets[110X over its subobject
+  classifier.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "SubcategoriesForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xomega := SubobjectClassifier( SkeletalFinSets );[127X[104X
+    [4X[28X|2|[128X[104X
+    [4X[25Xgap>[125X [27XS := SliceCategory( omega );[127X[104X
+    [4X[28XA slice category of SkeletalFinSets[128X[104X
+    [4X[25Xgap>[125X [27Xk := omega;[127X[104X
+    [4X[28X|2|[128X[104X
+    [4X[25Xgap>[125X [27XK := MapOfFinSets( k, [ 1, 0 ], omega ) / S;[127X[104X
+    [4X[28XAn object in the slice category given by: |2| → |2|[128X[104X
+    [4X[25Xgap>[125X [27Xl := FinSet( 6 );[127X[104X
+    [4X[28X|6|[128X[104X
+    [4X[25Xgap>[125X [27XL := MapOfFinSets( l, [ 1, 0, 1, 0, 0, 1 ], omega ) / S;[127X[104X
+    [4X[28XAn object in the slice category given by: |6| → |2|[128X[104X
+    [4X[25Xgap>[125X [27Xr := FinSet( 7 );[127X[104X
+    [4X[28X|7|[128X[104X
+    [4X[25Xgap>[125X [27XR := MapOfFinSets( r, [ 1, 0, 0, 1, 1, 0, 0 ], omega ) / S;[127X[104X
+    [4X[28XAn object in the slice category given by: |7| → |2|[128X[104X
+    [4X[25Xgap>[125X [27Xlambda := AsSliceCategoryCell( K, MapOfFinSets( k, [ 0, 1 ], l ), L );[127X[104X
+    [4X[28XA morphism in the slice category given by: |2| → |6|[128X[104X
+    [4X[25Xgap>[125X [27Xrho := AsSliceCategoryCell( K, MapOfFinSets( k, [ 0, 1 ], r ), R );[127X[104X
+    [4X[28XA morphism in the slice category given by: |2| → |7|[128X[104X
+    [4X[25Xgap>[125X [27Xg := FinSet( 8 );[127X[104X
+    [4X[28X|8|[128X[104X
+    [4X[25Xgap>[125X [27XG := MapOfFinSets( g, [ 1, 0, 1, 0, 0, 1, 1, 1 ], omega ) / S;[127X[104X
+    [4X[28XAn object in the slice category given by: |8| → |2|[128X[104X
+    [4X[25Xgap>[125X [27Xmu := AsSliceCategoryCell( L, MapOfFinSets( l, [ 0, 1, 2, 3, 4, 5 ], g ), G );[127X[104X
+    [4X[28XA morphism in the slice category given by: |6| → |8|[128X[104X
+    [4X[25Xgap>[125X [27Xpoc := PushoutComplement( lambda, mu );[127X[104X
+    [4X[28XA morphism in the slice category given by: |4| → |8|[128X[104X
+    [4X[25Xgap>[125X [27XDisplay( poc );[127X[104X
+    [4X[28X{ 0,..., 3 } ⱶ[ 0, 1, 6, 7 ]→ { 0,..., 7 }[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XA morphism in the slice category given by the above data[128X[104X
+    [4X[25Xgap>[125X [27XDisplay( Source( poc ) );[127X[104X
+    [4X[28X{ 0,..., 3 } ⱶ[ 1, 0, 1, 1 ]→ { 0, 1 }[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XAn object in the slice category given by the above data[128X[104X
+    [4X[25Xgap>[125X [27Xdpo := DPO( mu, lambda, rho );[127X[104X
+    [4X[28X[ A morphism in the slice category given by: |4| → |9|,[128X[104X
+    [4X[28X  A morphism in the slice category given by: |7| → |9| ][128X[104X
+    [4X[25Xgap>[125X [27XDisplay( dpo[1] );[127X[104X
+    [4X[28X{ 0,..., 3 } ⱶ[ 0, 1, 2, 3 ]→ { 0,..., 8 }[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XA morphism in the slice category given by the above data[128X[104X
+    [4X[25Xgap>[125X [27XDisplay( dpo[2] );[127X[104X
+    [4X[28X{ 0,..., 6 } ⱶ[ 0, 1, 4, 5, 6, 7, 8 ]→ { 0,..., 8 }[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XA morphism in the slice category given by the above data[128X[104X
+    [4X[25Xgap>[125X [27XDisplay( Range( dpo[1] ) );[127X[104X
+    [4X[28X{ 0,..., 8 } ⱶ[ 1, 0, 1, 1, 0, 1, 1, 0, 0 ]→ { 0, 1 }[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XAn object in the slice category given by the above data[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X4.3-4 [33X[0;0YPrecompilation[133X[101X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XLoadPackage( "SubcategoriesForCAP" );[127X[104X
@@ -293,7 +355,7 @@
     [4X[25X>[125X [27X    number_of_objectified_objects_in_data_structure_of_object := 3,[127X[104X
     [4X[25X>[125X [27X    number_of_objectified_morphisms_in_data_structure_of_object := 1,[127X[104X
     [4X[25X>[125X [27X    number_of_objectified_objects_in_data_structure_of_morphism := 6,[127X[104X
-    [4X[25X>[125X [27X    number_of_objectified_morphisms_in_data_structure_of_morphism := 2[127X[104X
+    [4X[25X>[125X [27X    number_of_objectified_morphisms_in_data_structure_of_morphism := 3[127X[104X
     [4X[25X>[125X [27X);[127X[104X
   [4X[32X[104X
   
