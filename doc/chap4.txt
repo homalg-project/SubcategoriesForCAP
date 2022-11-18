@@ -355,7 +355,7 @@
     [4X[25X>[125X [27X    number_of_objectified_objects_in_data_structure_of_object := 3,[127X[104X
     [4X[25X>[125X [27X    number_of_objectified_morphisms_in_data_structure_of_object := 1,[127X[104X
     [4X[25X>[125X [27X    number_of_objectified_objects_in_data_structure_of_morphism := 6,[127X[104X
-    [4X[25X>[125X [27X    number_of_objectified_morphisms_in_data_structure_of_morphism := 3[127X[104X
+    [4X[25X>[125X [27X    number_of_objectified_morphisms_in_data_structure_of_morphism := 4[127X[104X
     [4X[25X>[125X [27X);[127X[104X
   [4X[32X[104X
   
