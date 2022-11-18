@@ -164,13 +164,15 @@
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LoadPackage( "FinSetsForCAP", "&gt;= 2022.05-01" );</span>
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B := FinSet( 2 );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B := SubobjectClassifier( SkeletalFinSets );</span>
 |2|
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o0 := AsSliceCategoryCell( MapOfFinSets( B, [ 1, 1 ], B ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S := SliceCategory( B );</span>
+A slice category of SkeletalFinSets
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o0 := MapOfFinSets( B, [ 1, 1 ], B ) / S;</span>
 An object in the slice category given by: |2| → |2|
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o1 := AsSliceCategoryCell( MapOfFinSets( FinSet( 3 ), [ 0, 1, 0 ], B ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o1 := MapOfFinSets( FinSet( 3 ), [ 0, 1, 0 ], B ) / S;</span>
 An object in the slice category given by: |3| → |2|
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o2 := AsSliceCategoryCell( MapOfFinSets( FinSet( 4 ), [ 1, 0, 1, 0 ], B ) );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o2 := MapOfFinSets( FinSet( 4 ), [ 1, 0, 1, 0 ], B ) / S;</span>
 An object in the slice category given by: |4| → |2|
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( o0 );</span>
 true
@@ -242,6 +244,23 @@ A morphism in the slice category given by: |4| → |4|
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsOne( m5 );</span>
 false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t := DistinguishedObjectOfHomomorphismStructure( S );</span>
+|1|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H := MorphismsOfExternalHom( o1, o2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( H );</span>
+8
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h := HomStructure( o1, o2 );</span>
+|8|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HomStructure( m1, m2 );</span>
+|16| → |4|
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">th := MorphismsOfExternalHom( t, h );</span>
+[ |1| → |8|, |1| → |8|, |1| → |8|, |1| → |8|,
+  |1| → |8|, |1| → |8|, |1| → |8|, |1| → |8| ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">th = List( H, InterpretMorphismAsMorphismFromDistinguishedObjectToHomomorphismStructure );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H = List( th, m -&gt;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">        InterpretMorphismFromDistinguishedObjectToHomomorphismStructureAsMorphism( o1, o2, m ) );</span>
+true
 </pre></div>
 
 <p><a id="X782B6A7C868D3F7D" name="X782B6A7C868D3F7D"></a></p>
