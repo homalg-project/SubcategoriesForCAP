@@ -19,8 +19,12 @@
   [2XCAP_INTERNAL_METHOD_NAME_LIST_FOR_SLICE_CATEGORY[102X 3.2-1 
   [2XCAP_INTERNAL_METHOD_NAME_LIST_FOR_SUBCATEGORY[102X 1.2-1 
   [2XFullSubcategory[102X, for IsCapCategory, IsString 2.3-1 
-  [2XFullSubcategoryByObjectMembershipFunction[102X 2.3-3 
+  [2XFullSubcategoryByObjectMembershipFunction[102X 2.3-5 
   [2XFullSubcategoryGeneratedByListOfObjects[102X 2.3-2 
+  [2XFullSubcategoryOfIndecomposableInjectiveObjects[102X, for IsCapCategory 2.3-4 
+  [2XFullSubcategoryOfIndecomposableProjectiveObjects[102X, for IsCapCategory 2.3-3 
+  [2XFullSubcategoryOfInjectiveObjects[102X, for IsCapCategory 2.3-7 
+  [2XFullSubcategoryOfProjectiveObjects[102X, for IsCapCategory 2.3-6 
   [2XInclusionFunctor[102X, for IsCapFullSubcategory 2.4-1 
       for IsCapSliceCategory 3.3-6 
   [2XIsCapCategoryCellInAFullSubcategory[102X, for IsCapCategoryCellInASubcategory 2.1-4 

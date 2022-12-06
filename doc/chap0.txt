@@ -6,10 +6,10 @@
         [1X Subcategory and other related constructors for CAP categories [101X
   
   
-                                   2022.11-07
+                                   2022.12-01
   
   
-                                18 November 2022
+                                6 December 2022
   
   
                                 Mohamed Barakat
@@ -83,7 +83,11 @@
     2.3 [33X[0;0YConstructors[133X
       2.3-1 FullSubcategory
       2.3-2 FullSubcategoryGeneratedByListOfObjects
-      2.3-3 FullSubcategoryByObjectMembershipFunction
+      2.3-3 FullSubcategoryOfIndecomposableProjectiveObjects
+      2.3-4 FullSubcategoryOfIndecomposableInjectiveObjects
+      2.3-5 FullSubcategoryByObjectMembershipFunction
+      2.3-6 FullSubcategoryOfProjectiveObjects
+      2.3-7 FullSubcategoryOfInjectiveObjects
     2.4 [33X[0;0YFunctors[133X
       2.4-1 InclusionFunctor
       2.4-2 RestrictFunctorToFullSubcategoryOfSource
