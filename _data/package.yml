@@ -1,5 +1,5 @@
 name: SubcategoriesForCAP
-version: "2023.01-03"
+version: "2023.01-04"
 license: "GPL-2.0-or-later"
 date: 2023-01-17
 description: |
@@ -54,11 +54,11 @@ packageinfo: https://homalg-project.github.io/SubcategoriesForCAP/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v2023.01-03/SubcategoriesForCAP-2023.01-03.tar.gz
+      url: https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v2023.01-04/SubcategoriesForCAP-2023.01-04.tar.gz
     - name: .zip
-      url: https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v2023.01-03/SubcategoriesForCAP-2023.01-03.zip
+      url: https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v2023.01-04/SubcategoriesForCAP-2023.01-04.zip
 
-pdf: https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v2023.01-03/SubcategoriesForCAP-2023.01-03.pdf
+pdf: https://github.com/homalg-project/SubcategoriesForCAP/releases/download/v2023.01-04/SubcategoriesForCAP-2023.01-04.pdf
 
 abstract: |
 
@@ -69,7 +69,7 @@ citeas: |
     <p class='BibEntry'>
     [<span class='BibKey'>BKS23</span>]   <b class='BibAuthor'>Barakat, M., Kuhmichel, T. and Saleh, K.</b>,
      <i class='BibTitle'>SubcategoriesForCAP, Subcategory and other related constructors for CAP categories,
-             Version 2023.01-03</i>
+             Version 2023.01-04</i>
      (<span class='BibYear'>2023</span>)<br />
     (<span class='BibNote'>GAP package</span>),
     <span class='BibHowpublished'><a href="https://homalg-project.github.io/pkg/SubcategoriesForCAP">https://homalg-project.github.io/pkg/SubcategoriesForCAP</a></span>.
@@ -77,10 +77,10 @@ citeas: |
     
 
 bibtex: |
-    @misc{ SubcategoriesForCAP2023.01-03,
+    @misc{ SubcategoriesForCAP2023.01-04,
       author =           {Barakat, M. and Kuhmichel, T. and Saleh, K.},
       title =            {{SubcategoriesForCAP},  Subcategory  and other related
-                          constructors for CAP categories, {V}ersion 2023.01-03},
+                          constructors for CAP categories, {V}ersion 2023.01-04},
       month =            {Jan},
       year =             {2023},
       note =             {GAP package},
