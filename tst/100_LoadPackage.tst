@@ -11,20 +11,12 @@ gap> LoadPackage( "IO_ForHomalg", false );
 true
 gap> LoadPackage( "FreydCategoriesForCAP", false );
 true
-gap> LoadPackage( "FinSetsForCAP", false );
-true
-gap> LoadPackage( "Locales", false );
-true
 gap> LoadPackage( "SubcategoriesForCAP", false );
 true
 gap> SetInfoLevel( InfoPackageLoading, PACKAGE_INFO );;
 gap> LoadPackage( "IO_ForHomalg" );
 true
 gap> LoadPackage( "FreydCategoriesForCAP" );
-true
-gap> LoadPackage( "FinSetsForCAP" );
-true
-gap> LoadPackage( "Locales" );
 true
 gap> LoadPackage( "SubcategoriesForCAP" );
 true
